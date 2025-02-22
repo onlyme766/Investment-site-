@@ -1,27 +1,86 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment Site</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <title>YourMany</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100">
-    <div class="container mx-auto p-4">
-        <h1 class="text-3xl font-bold mb-4 text-center">বাংলাদেশি ইনভেস্টমেন্ট প্ল্যাটফর্ম</h1><!-- User Registration/Login -->
-    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
-        <h2 class="text-2xl mb-4">লগইন / রেজিস্ট্রেশন</h2>
-        <form>
-            <input type="text" placeholder="ইউজারনেম" class="w-full p-2 border mb-4">
-            <input type="password" placeholder="পাসওয়ার্ড" class="w-full p-2 border mb-4">
-            <button class="bg-blue-500 text-white p-2 w-full">লগইন</button>
-        </form>
-    </div>
+<body>
+    <header>
+        <h1>Welcome to YourMany</h1>
+        <p>Play exciting games and win amazing prizes!</p>
+    </header>
 
-    <!-- Investment Plans -->
-    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
-        <h2 class="text-2xl mb-4">ইনভেস্টমেন্ট প্ল্যান</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-green-100 p-4 rounded">
-                <h3 class="text-xl font-bold">স্টার্টার প্ল্যান</h3>
-                <p>৳১০০০ ইনভ
+    <section id="games">
+        <h2>Our Games</h2>
+        <div class="game">
+            <h3>Lucky Lottery</h3>
+            <p>Join our daily lottery and win up to BDT 10,000!</p>
+            <button>Play Now</button>
+        </div>
+        <div class="game">
+            <h3>Spin the Wheel</h3>
+            <p>Spin the wheel and win instant prizes!</p>
+            <button>Play Now</button>
+        </div>
+    </section>
 
+    <footer>
+        <p>&copy; 2023 YourMany. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#games {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.game {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
