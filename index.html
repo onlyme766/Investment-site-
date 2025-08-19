@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Raj Surveillance Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #111;
+      color: #eee;
+      padding: 20px;
+    }
+    h1 {
+      color: #00ff99;
+    }
+    #logs {
+      margin-top: 20px;
+    }
+    button {
+      background: #00ff99;
+      color: #000;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .adsense {
+      margin-top: 30px;
+      background: #333;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>🛡️ Raj Surveillance Dashboard</h1>
+  <div id="logs"><h2>Loading threat logs...</h2></div>
+  <button onclick="window.location.href='https://hackerone.com/onlyme766'">Report Vulnerability</button>
+  <div class="adsense">[AdSense Banner Placeholder]</div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyD...",
+      authDomain: "news247-64290.firebaseapp.com",
+      databaseURL: "https://news247-64290-default-rtdb.firebaseio.com",
+      projectId: "news247-64290",
+      storageBucket: "news247-64290.appspot.com",
+      messagingSenderId: "1234567890",
+      appId: "1:1234567890:web:abcdefg"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    db.ref("threatLogs").on("value", snapshot => {
+      const logs = snapshot.val();
+      let html = "<h2>Live Threat Logs</h2>";
+      for (let key in logs) {
+        const log = logs[key];
+        html += `<p>🕒 ${log.time} | ⚠️ ${log.type} | ✅ ${log.status}</p>`;
+      }
+      document.getElementById("logs").innerHTML = html;
+    });
+  </script>
+</body>
+</html>
